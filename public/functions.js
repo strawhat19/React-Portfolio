@@ -6,6 +6,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: './lf20_NedRrA.json'
+    path: './react.json'
   })
 })

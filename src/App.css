@@ -358,8 +358,8 @@ header::after {
   z-index: 0;
   right: 30px;
   top: 0;
-  -webkit-animation: rotate 15s linear infinite;
-          animation: rotate 15s linear infinite;
+  -webkit-animation: rotate 15s linear infinite alternate;
+          animation: rotate 15s linear infinite alternate;
   margin-top: -8em;
 }
 
