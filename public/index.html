@@ -60,7 +60,6 @@
     <!-- Lottie JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js" integrity="sha512-srGxQe2w7s50+5/nNgEVKYtBm15zRylJwdjxYnGEZr3mmHFJKFjA/ImA2OKizVzoIDX8XISMHDI1+az9pnumbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./lottie.js"></script>
-    <script src="./functions.js"></script>
     <script>
       var animation = bodymovin.loadAnimation({
         container: document.querySelector('#animation'),
@@ -69,6 +68,23 @@
         autoplay: true,
         path: 'https://assets8.lottiefiles.com/packages/lf20_NedRrA.json'
         })
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+          const navLinks = document.querySelectorAll(`nav a`);
+          console.log(event);
+          console.log(navLinks);
+          navLinks.forEach(link => {
+            link.addEventListener(`click`, event => {
+              let currentPage = event.target.id;
+              localStorage.setItem(`Current Page`, currentPage);
+              console.log(currentPage);
+            })
+          })
+        });
+
+        function openResume() {
+          window.location.href = `https://strawhat19.github.io/Portfolio/resume/Rakib-Ahmed-Coding-Resume.pdf`;
+        }
     </script>
 </body>
 
