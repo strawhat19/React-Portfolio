@@ -2,8 +2,8 @@ import React from 'react';
 
 function Homepage() {
     return (
-    <div class="quizBox contain homepage">
-        <div class="quizBoxTitle">
+    <div class="contentContainer contain homepage">
+        <div class="contentContainerTitle">
             <h1 class="spacer"><i class="fab fa-react"></i> | React <span class="boldSecondary">Portfolio</span></h1>
             <div class="iconContainer outerIconContainer">
                 <a class="showScoresLink hoverLine" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>

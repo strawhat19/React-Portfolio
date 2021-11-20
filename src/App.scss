@@ -1,256 +1,109 @@
-/* Coding Quiz Stylesheet */
-
-/* Imported Fonts */
+// React Stylesheet
+/* Imported Google Fonts */
 /* Noto Sans JP */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --react: #0fccce;
-    --reactDark: #1f343a;
-    --reactNavy: #033ee3;
-    --correct: #00cc80;
-    --wrong: #ff172d;
-    --soft: #dcd9d4;
-    --gray: #181a1b;
-    --silver: #4b5155;
-    /* Add Backdrop Filter of 8px to Create Glass Effect on Elements */
-    --neutralGlass: rgb(0 194 255 / 40%);
-    --neutralDarkGlass: rgb(18 130 166 / 70%);
-    --silverGlass: rgb(75 81 85 / 85%);
-    --blackGlass: rgb(0 0 0 / 65%);
-    --html: #f16529;
-    --css: #2862e9;
-    --js: #f7df1e;
-    --php: #7377ad;
-    // --react: #5ed3f3;
-    --node: #73ab60;
-    --sass: #f783ac;
-    --sql: #f783ac;
-    --mongo: #00684a;
-    --git: #e94e31;
-    --swift: #f4993a;
-}
-
-.html i {
-  color: var(--html);
-}
-
-.css i {
-  color: var(--css);
-}
-
-.js i {
-  color: var(--js);
-}
-
-.sass i {
-  color: var(--sass);
-}
-
-.sql i {
-  color: var(--sql);
-}
-
-.node i {
-  color: var(--node);
-}
-
-.mongo i {
-  color: var(--mongo);
-}
-
-.react i {
-  color: var(--react);
-}
-
-.git i {
-  color: var(--git);
-}
-
-.swift i {
-  color: var(--swift);
+  --react: #0fccce;
+  --reactDark: #1f343a;
+  --reactNavy: #033ee3;
+  --reactAlt: #5ed3f3;
+  --correct: #00cc80;
+  --wrong: #ff172d;
+  --soft: #dcd9d4;
+  --gray: #181a1b;
+  --silver: #4b5155;
+  /* Add Backdrop Filter of 8px to Create Glass Effect on Elements */
+  --neutralGlass: rgb(0 194 255 / 40%);
+  --neutralDarkGlass: rgb(18 130 166 / 70%);
+  --silverGlass: rgb(75 81 85 / 85%);
+  --blackGlass: rgb(0 0 0 / 65%);
+  --html: #f16529;
+  --css: #2862e9;
+  --js: #f7df1e;
+  --php: #7377ad;
+  --node: #73ab60;
+  --sass: #f783ac;
+  --sql: #f783ac;
+  --mongo: #00684a;
+  --git: #e94e31;
+  --swift: #f4993a;
 }
 
 ::selection {
-    background: var(--react);
-    color: #000;
+  background: var(--react);
+  color: #000;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+::marker {
+  color: var(--react);
 }
 
 #root {
-  width: 100%;
-  height: 100%;
-}
-
-.hide {
-    display: none;
-}
-
-.answer.list-item.correct {
-    border: solid 1px var(--correct);
-    background: transparent;
-    transition: 150ms ease-in-out;
-}
-
-.answer.list-item.correct:hover {
-    background: var(--correct);
-    box-shadow: 0 0 20px var(--correct);
-    transition: 150ms ease-in-out;
-}
-
-.answer.list-item.correct::before {
-    color: var(--correct);
-}
-
-.answer.list-item.correct:hover::before {
-    color: #fff;
-}
-
-.answer.list-item.wrong {
-    border: solid 1px var(--wrong);
-    background: transparent;
-    transition: 150ms ease-in-out;
-}
-
-.answer.list-item.wrong:hover {
-    background: var(--wrong);
-    box-shadow: 0 0 20px var(--wrong);
-    transition: 150ms ease-in-out;
-}
-
-.answer.list-item.wrong::before {
-    color: var(--wrong);
-}
-
-.answer.list-item.wrong:hover::before {
-    color: #fff;
-}
-
-.wrong {
-    background: var(--wrong);
-}
-
-.neutral {
-    background: var(--react);
-}
-
-.blackGlass {
-    backdrop-filter: blur(8px);
-    background: var(--blackGlass);
-}
-
-/* Input Range */
-input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
-  
-  input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  }
-  
-  input[type=range]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-  
-    /* Hides the slider so custom styles can be added */
-    background: transparent; 
-    border-color: transparent;
-    color: transparent;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: 1px solid #fff;
-    height: 16px;
-    width: 16px;
-    border-radius: 10px;
-    transform: scale(0.8);
-    background: #fff;
-    cursor: pointer;
-    margin-top: -2.9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 1px 1px 1px #fff, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
-  }
-
-  #dynamicTime {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 12em;
-}
-
-  .fa-stopwatch {
-    margin-top: .2em;
-}
-
-#timerRange {
-    background: var(--react);
-    color: var(--react);
-    height: .1em;
-    margin-left: .5em;
-    margin-top: .1em;
+width: 100%;
+height: 100%;
 }
 
 body {
-    scroll-behavior: smooth;
-    color: white;
-    font-family: 'Montserrat';
-    letter-spacing: 0.5px;
-    display: flex;
-    min-height: 100vh;
-    justify-content: center;
-    align-content: center;
-    background: var(--reactDark);
-    overflow: hidden;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: 'Montserrat';
+  letter-spacing: 0.5px;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-content: center;
+  background: var(--reactDark);
+  overflow: hidden;
 }
 
 a {
-    color: white !important;
-    font-family: Noto Sans JP;
-    text-decoration: none;
-    font-weight: 300 !important;
+  color: white !important;
+  font-family: Noto Sans JP;
+  text-decoration: none;
+  font-weight: 300 !important;
 }
 
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .hoverLine {
-    position: relative;
-    transition: 300ms ease-in-out;
+  position: relative;
+  transition: 300ms ease-in-out;
 }
 
 .hoverLine::after {
-    content: '';
-    background: var(--react);
-    position: absolute;
-    transition: 300ms ease-in-out;
-    height: 1px;
-    width: 100%;
-    bottom: -4px;
-    left: 0;
-    transform-origin: left;
-    transform: scale(0,1);
+  content: '';
+  background: var(--react);
+  position: absolute;
+  transition: 300ms ease-in-out;
+  height: 1px;
+  width: 100%;
+  bottom: -4px;
+  left: 0;
+  transform-origin: left;
+  transform: scale(0,1);
 }
 
 .homeLink::after {
-    width: 105%;
+  width: 105%;
 }
 
 .hoverLine:hover::after {
-    transition: 300ms ease-in-out;
-    transform: scale(1,1);
+  transition: 300ms ease-in-out;
+  transform: scale(1,1);
 }
 
 header {
@@ -265,7 +118,7 @@ header {
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: -50px;
+  top: -130px;
   width: 32%;
 }
 
@@ -308,6 +161,18 @@ header::after {
   color: var(--react);
 }
 
+
+nav {
+  background: #000;
+  clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  grid-gap: 2em;
+  padding: 1.5em 0em 1.5em 3em;
+  font-family: 'Noto Sans JP' !important;
+}
+
 #animation {
   width: 35%;
   height: 100%;
@@ -317,6 +182,19 @@ header::after {
   top: 0;
   animation: rotate 15s linear infinite alternate;
   margin-top: -5em;
+}
+
+main {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-gap: 50px;
+  align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50em;
+  margin: 195px 0;
 }
 
 #animation {
@@ -350,18 +228,6 @@ header::after {
   }
 }
 
-nav {
-  background: #000;
-  clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  grid-gap: 2em;
-  padding: 1.5em 0em 1.5em 3em;
-  font-family: 'Noto Sans JP' !important;
-}
-
-
 footer {
   background: var(--blackGlass);
   height: 40px;
@@ -376,12 +242,9 @@ footer {
   font-size: 13px;
   grid-gap: 10px;
   z-index: 1;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer::before {
@@ -395,268 +258,136 @@ footer::before {
 }
 
 footer i, .vertical-sep {
-    color: var(--react);
+  color: var(--react);
 }
 
-i.fas.fa-undo {
-    font-size: 0.8em;
-    margin-bottom: 0em;
+.html i {
+  color: var(--html);
 }
 
-main {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    grid-gap: 50px;
-    align-items: flex-start;
-    /* Background Question Logo */
-    /* background: linear-gradient(var(--reactDarkGlass),var(--reactDarkGlass)),url(/assets/images/Vectorquestion.svg); */
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50em;
-    margin: 195px 0;
+.css i {
+  color: var(--css);
 }
 
-/* Show Scores */
-#scoresHover {
-    position: absolute;
-    top: 45px;
-    left: 0;
-    opacity: 0;
-    width: 450%;
-    border-radius: 10px;
-    padding: 2em;
-    background: var(--blackGlass);
-    backdrop-filter: blur(8px);
-    text-align: left;
-    transform-origin: top;
-    transform: scale(1,0);
-    display: flex;
-    flex-direction: column;
-    grid-gap: 1em;
-    transition: 300ms ease-in-out;
+.js i {
+  color: var(--js);
 }
 
-.showScoresLink:hover #scoresHover {
-    transform: scale(1,1);
-    opacity: 1;
+.sass i {
+  color: var(--sass);
+}
+
+.sql i {
+  color: var(--sql);
+}
+
+.node i {
+  color: var(--node);
+}
+
+.mongo i {
+  color: var(--mongo);
+}
+
+.react i {
+  color: var(--react);
+}
+
+.git i {
+  color: var(--git);
+}
+
+.swift i {
+  color: var(--swift);
+}
+
+.neutral {
+  background: var(--react);
+}
+
+.blackGlass {
+  backdrop-filter: blur(8px);
+  background: var(--blackGlass);
+}
+
+/* Input Range */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 10px;
+  transform: scale(0.8);
+  background: #fff;
+  cursor: pointer;
+  margin-top: -2.9px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #fff, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
 
 .fadeInOut {
-    animation: fadeInOut 3500ms ease-in-out 1;
+  animation: fadeInOut 3500ms ease-in-out 1;
 }
 
 @keyframes fadeInOut {
-    0% {
-        transform: scale(1,0);
-        opacity: 0;
-    }
-    20% {
-        opacity: 0;
-        transform: scale(1,0.4);
-    }
-    30% {
-        transform: scale(1,1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1,1);
-        opacity: 1;
-    }
-    80% {
-        transform: scale(1,1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1,0);
-        opacity: 0;
-    }
-}
-
-/* End Time or Quiz Finish */
-/* End Screens */
-
-#formEntry {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em 0 0;
-    flex-direction: row;
-}
-
-#formEntry input {
-    background: transparent;
-    outline: none;
-    border: none;
-    padding: 0.7em 1em 0.5em;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1em;
-    max-width: 12em;
-    border: 3px solid var(--react);
-}
-
-::placeholder {
-    color: #fff;
-}
-
-#userStats {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 30vw;
-}
-
-#userStats .stats div {
-    border-right: 1px solid var(--react);
-    font-style: italic;
-    padding: 0 1em;
-    border-left: 1px solid var(--react);
-}
-
-#userStats .stats div:nth-child(1) {
-    border-left: none;
-}
-
-#userStats .stats div:nth-child(4) {
-    border-right: none;
-}
-
-#entryForm {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-#scoresHover button {
-    padding: 0.3em 1em 0.3em;
-    border-radius: 10px;
-    color: #fff;
-    background: transparent;
-    outline: none;
-    border: none;
-    margin: 1em 0em 0;
-    font-weight: 400;
-    font-size: .85em;
-    border: 3px solid var(--react);
-    transition: 300ms ease-in-out;
-}
-
-#scoresHover button:hover {
-    background: var(--react);
-    border: 3px solid var(--react);
-    transition: 300ms ease-in-out;
-}
-
-#submitButton {
-    padding: 0.7em 1em 0.5em;
-    border-radius: 10px;
-    color: #fff;
-    background: transparent;
-    outline: none;
-    border: none;
-    margin: 0 1em;
-    font-weight: 600;
-    font-size: 1em;
-    border: 3px solid var(--react);
-    transition: 300ms ease-in-out;
-}
-
-#submitButton:hover {
-    background: var(--react);
-    border: 3px solid var(--react);
-    transition: 300ms ease-in-out;
-}
-
-.statistic {
-    display: flex;
-    font-weight: 300;
-    letter-spacing: 1px;
-    justify-content: space-between;
-}
-
-#goodJobMessage {
-    text-align: center;
-    padding: 2em 1em 0;
-    font-size: 20px;
-    font-style: italic;
-}
-
-.reinitializeMessage {
-    text-align: center;
-    padding: 2em 1em 0;
-    font-size: 16px;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 1em;
-}
-
-.endScreen h2 {
-    padding: 0.5em 0;
-}
-
-.lineSepEnd {
-    height: 5px;
-    margin: 1.4em 0 1.2em;
-    background: var(--react);
-}
-
-.contain.question.questionBox.quizBox.timeOut {
-    min-width: 75vw;
-}
-
-.contain.question.questionBox.quizBox.timeOut .quizBoxTitle {
-    justify-content: center;
-    align-items: baseline;
-}
-
-.totalPointsElement {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.totalPointsElement .iconContainer {
-    min-width: 140px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.totalPointsElement .customIcon {
-    font-size: .8em;
-    color: #fff;
-    background: var(--react);
-    border-radius: 100%;
-    font-weight: 800;
-    outline: none;
-    padding: 0.3em 0.45em;
-    min-width: 1em;
-    text-align: center;
-    margin-bottom: 0px;
-    margin-left: 10px;
-}
-
-.contain {
-    padding: 3em;
+  0% {
+      transform: scale(1,0);
+      opacity: 0;
+  }
+  20% {
+      opacity: 0;
+      transform: scale(1,0.4);
+  }
+  30% {
+      transform: scale(1,1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1,1);
+      opacity: 1;
+  }
+  80% {
+      transform: scale(1,1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1,0);
+      opacity: 0;
+  }
 }
 
 .topbar i {
-    color: var(--react);
+  color: var(--react);
 }
 
-.quizBox {
+.contain {
+  padding: 3em;
+}
+
+.contentContainer {
   background: var(--blackGlass);
   border-radius: 0px;
   -webkit-backdrop-filter: blur(8px);
@@ -668,18 +399,10 @@ main {
   border-bottom-left-radius: 0;
   clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
   position: relative;
-  margin-top: 4em;
+  margin-top: 0em;
 }
 
-.content {
-  width: 93%;
-}
-
-.content .lineSep {
-  width: 84%;
-}
-
-.quizBox::before {
+.contentContainer:not(.about)::before {
   content: '';
   position: absolute;
   background: var(--react);
@@ -692,7 +415,34 @@ main {
   transform: rotate(-39.5deg);
 }
 
-.quizBoxTitle {
+.about::after {
+  content: '';
+  position: absolute;
+  background: var(--react);
+  width: 100%;
+  height: 3%;
+  z-index: -1;
+  top: 0;
+  padding: 0em 0em;
+  right: -343px;
+  transform: rotate(52deg);
+}
+
+.content {
+  width: 93%;
+}
+
+.content .lineSep {
+  width: 84%;
+}
+
+p.spacer {
+  width: 85%;
+  font-family: 'Montserrat' !important;
+  line-height: 1.6em;
+}
+
+.contentContainerTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -709,7 +459,7 @@ main {
   font-size: 1.5em;
 }
 
-.quizBoxTitle i {
+.contentContainerTitle i {
   color: var(--react);
 }
 
@@ -718,70 +468,62 @@ main {
 }
 
 .customIcon {
-    font-size: 1em;
-    color: #000000;
-    background: white;
-    border: 3px solid var(--react);
-    border-radius: 100%;
-    font-weight: 800;
-    outline: none;
-    padding: 0 .15em;
-    min-width: 1.9em;
-    text-align: center;
+  font-size: 1em;
+  color: #000000;
+  background: white;
+  border: 3px solid var(--react);
+  border-radius: 100%;
+  font-weight: 800;
+  outline: none;
+  padding: 0 .15em;
+  min-width: 1.9em;
+  text-align: center;
 }
 
 .customIcon:hover {
-    color: #fff;
-    background: transparent;
-    cursor: crosshair;
-}
-
-.help:hover {
-    cursor: pointer;
+  color: #fff;
+  background: transparent;
+  cursor: crosshair;
 }
 
 .transition {
-    transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 h1 {
-    font-weight: 300 !important;
+  font-weight: 300 !important;
 }
 
 .boldSecondary {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .lineSep {
-    height: 0.1px;
-    margin: 0.4em 0 0.2em;
-    background: var(--react);
+  height: 0.1px;
+  margin: 0.4em 0 0.2em;
+  background: var(--react);
 }
 
 .spacer {
-    padding: 0.3em 0;
+  padding: 0.3em 0;
 }
 
 h2 {
-    font-weight: 500 !important;
-    font-style: italic;
-    border-bottom: 1px solid var(--react);
-    display: inline-block;
-    padding: 0.3em 0.3em 0.3em;
+  font-weight: 500 !important;
+  font-style: italic;
+  border-bottom: 1px solid var(--react);
+  display: inline-block;
+  padding: 0.3em 0.3em 0.3em;
 }
 
 p {
-    font-weight: 300 !important;
-    margin-top: 15px;
+  font-weight: 300 !important;
+  margin-top: 15px;
 }
 
 span, p {
-    color: white;
-    font-family: 'Noto Sans JP' !important;
-}
-
-.questionBox {
-    min-width: 90vw;
+  color: white;
+  font-family: 'Noto Sans JP' !important;
 }
 
 .list-group {
@@ -797,64 +539,6 @@ span, p {
     min-height: 150px;
     height: 150px;
     max-height: 300px;
-}
-
-.answerChoices {
-    display: grid !important;
-    justify-content: stretch;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    list-style-type: none !important;
-    column-gap: 15px !important;
-    row-gap: 15px !important;
-    grid-gap: 0;
-}
-
-.questionIndex {
-    font-weight: 500 !important;
-    font-style: italic;
-    display: block;
-    padding: 0.3em 0.3em 0.6em;
-    margin-top: 10px;
-    margin-bottom: -35px;
-    text-align: center;
-    border-bottom: none;
-}
-
-.answer {
-    justify-self: stretch;
-    align-self: center;
-    border: solid 1px var(--react);
-    padding: 1em;
-    font-size: 15px;
-    border-radius: 10px;
-    font-weight: 400;
-    transition: 150ms ease-in-out;
-}
-
-.answer::before {
-    content: '> ';
-    color: var(--react);
-    font-size: 1em;
-    font-family: system-ui;
-    font-weight: 900;
-    transition: 150ms ease-in-out;
-}
-
-.answer:hover {
-background: var(--react);
-    cursor: pointer;
-    box-shadow: 0 0 20px var(--react);
-    transition: 150ms ease-in-out;
-    color: #fff;
-}
-
-.answer:hover::before {
-    color: #fff;
-}
-
-::marker {
-    color: var(--react);
 }
 
 .gameButton {
@@ -891,201 +575,6 @@ background: var(--react);
 /* Big Screens Breakpoint */
 @media screen and (max-width: 1555px) {
 
-    .outerIconContainerQuestions {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-}
-
-/* Notebook Breakpoint */
-@media screen and (max-width: 1215px) {
-
-    #userStats {
-        flex-direction: column;
-    }
-
-    #userStats .stats {
-        margin-bottom: 2em;
-    }
-
-}
-
-/* Tablet Breakpoint */
-@media screen and (max-width: 992px) {
-
-    main {
-        background-size: 40em;
-    }
-
-}
-
-/* Between Tablet and iPhone */
-@media screen and (max-width: 805px) {
-
-    .outerIconContainer {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .contain.question.questionBox.quizBox.timeOut .quizBoxTitle {
-        justify-content: center;
-        align-items: center;
-    }
-
-    #userStats .stats {
-        flex-direction: column;
-    }
-
-    #userStats .stats div {
-        width: 100%;
-        margin: 15px 30px;
-        text-align: center;
-        border-left: none !important;
-        border-right: none !important;
-        border-bottom: 1px solid var(--react);
-        padding-bottom: 2em;
-    }
-    
-    #userStats .stats div:nth-child(4) {
-        border-bottom: none;
-    }
-
-    #entryForm {
-        display: flex;
-        align-items: center;
-        justify-content: stretch;
-        flex-direction: column;
-        width: 100%;
-        grid-gap: 15px;
-        margin-top: -3em;
-        border-top: 1px solid var(--react);
-        padding-top: 2.5em;
-    }
-
-    #formEntry input {
-        width: 50%;
-    }
-
-    #submitButton {
-        width: 50%;
-    }
-
-}
-
-/* iPhone Breakpoint */
-@media screen and (max-width: 768px) {
-
-    .list-group {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        padding: 2.2em 0;
-        grid-gap: 15px;
-        font-size: 13px;
-        font-weight: 300;
-        flex-wrap: wrap;
-        list-style: inside;
-        min-height: 150px;
-    }
-
-    .answerChoices {
-        display: grid !important;
-        justify-content: stretch;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 50% 50%;
-        list-style-type: none !important;
-        column-gap: 15px !important;
-        row-gap: 15px !important;
-        grid-gap: 0;
-    }
-
-    .answer::before {
-        display: none;
-    }
-
-    .questionIndex {
-        margin-top: 0px;
-        padding-bottom: .5em;
-    }
-
-}
-
-
-/* Mobile Breakpoint */
-@media screen and (max-width: 676px) {
-
-    .homeLink {
-        display: none;
-    }
-
-    main {
-        background-size: 30em;
-    }
-
-    h1 {
-        font-size: 1.5em;
-        font-weight: 400 !important;
-    }
-
-    h2 {
-        font-size: 1.2em;
-        font-weight: 300 !important;
-    }
-
-    p {
-        font-size: 0.85em;
-        font-weight: 100 !important;
-    }
-
-    .list-group {
-        font-size: 12px;
-        font-weight: 100;
-        height: auto;
-        max-height: none;
-    }
-
-}
-
-/* Small Breakppoint */
-@media screen and (max-width: 400px) {
-
-    #dynamicTime input {
-        display: none;
-    }
-
-    .timeLeft {
-        width: 3.5em !important;
-    }
-
-    #dynamicTime {
-        justify-content: center;
-    }
-
-    .fa-stopwatch {
-        margin-right: 0.2em;
-    }
-
-    header, footer {
-        padding: 0 30px;
-    }
-
-    .contain {
-        padding: 2.5em;
-    }
-
-    main {
-        height: auto;
-    }
-
-    footer {
-        justify-content: center;
-    }
-
-    .siteText {
-        display: none;
-    }
-
 }
 
 @media (max-width: 1536px) {
@@ -1095,7 +584,7 @@ background: var(--react);
     width: 40%;
   }
 
-  .quizBox {
+  .contentContainer {
     margin-top: -5em;
     &::before {
       width: 12px;
@@ -1104,6 +593,101 @@ background: var(--react);
       right: 11.45%;
       transform: rotate(-33.5deg);
     }
+  }
+
+}
+
+/* Notebook Breakpoint */
+@media screen and (max-width: 1215px) {
+
+}
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 992px) {
+
+}
+
+/* Between Tablet and iPhone */
+@media screen and (max-width: 805px) {
+
+  .outerIconContainer {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+}
+
+/* iPhone Breakpoint */
+@media screen and (max-width: 768px) {
+
+  .list-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2.2em 0;
+    grid-gap: 15px;
+    font-size: 13px;
+    font-weight: 300;
+    flex-wrap: wrap;
+    list-style: inside;
+    min-height: 150px;
+  }
+
+}
+
+
+/* Mobile Breakpoint */
+@media screen and (max-width: 676px) {
+
+  main {
+      background-size: 30em;
+  }
+
+  .homeLink {
+    display: none;
+  }
+
+  h1 {
+      font-size: 1.5em;
+      font-weight: 400 !important;
+  }
+
+  h2 {
+      font-size: 1.2em;
+      font-weight: 300 !important;
+  }
+
+  p {
+      font-size: 0.85em;
+      font-weight: 100 !important;
+  }
+
+  .list-group {
+      font-size: 12px;
+      font-weight: 100;
+      height: auto;
+      max-height: none;
+  }
+
+}
+
+/* Small Breakppoint */
+@media screen and (max-width: 400px) {
+
+  header, footer {
+      padding: 0 30px;
+  }
+
+  .contain {
+      padding: 2.5em;
+  }
+
+  main {
+      height: auto;
+  }
+
+  footer {
+      justify-content: center;
   }
 
 }
