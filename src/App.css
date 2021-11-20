@@ -23,7 +23,6 @@
   --neutralGlass: rgb(0 194 255 / 40%);
   --neutralDarkGlass: rgb(18 130 166 / 70%);
   --silverGlass: rgb(75 81 85 / 85%);
-  --blackGlass: rgb(0 0 0 / 65%);
   --html: #f16529;
   --css: #2862e9;
   --js: #f7df1e;
@@ -303,7 +302,7 @@ main {
 }
 
 footer {
-  background: var(--blackGlass);
+  background: #000;
   height: 40px;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -332,10 +331,10 @@ footer {
 footer::before {
   content: '';
   position: absolute;
-  top: -33%;
+  top: -25%;
   left: 0;
   background: var(--react);
-  height: 32%;
+  height: 25%;
   width: 100%;
 }
 
@@ -385,12 +384,6 @@ footer i, .vertical-sep {
 
 .neutral {
   background: var(--react);
-}
-
-.blackGlass {
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-  background: var(--blackGlass);
 }
 
 /* Input Range */
@@ -518,7 +511,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .contentContainer {
-  background: var(--blackGlass);
+  background: #000;
   border-radius: 0px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -547,7 +540,7 @@ input[type=range]::-webkit-slider-thumb {
           transform: rotate(-39.5deg);
 }
 
-.about::after {
+.contentContainer.about::after {
   content: '';
   position: absolute;
   background: var(--react);
@@ -557,8 +550,8 @@ input[type=range]::-webkit-slider-thumb {
   top: 0;
   padding: 0em 0em;
   right: -343px;
-  -webkit-transform: rotate(52deg);
-          transform: rotate(52deg);
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
 }
 
 .content {
@@ -729,19 +722,19 @@ span, p {
 /* Big Screens Breakpoint */
 @media (max-width: 1536px) {
   header {
-    top: 10px;
+    top: -185px;
     width: 40%;
   }
   .contentContainer {
-    margin-top: -5em;
+    margin-top: -8em;
   }
   .contentContainer::before {
-    width: 12px;
-    height: 158%;
-    top: -112px;
-    right: 11.45%;
-    -webkit-transform: rotate(-33.5deg);
-            transform: rotate(-33.5deg);
+    width: 12px !important;
+    height: 158% !important;
+    top: -112px !important;
+    right: 11.5% !important;
+    -webkit-transform: rotate(-33.2deg) !important;
+            transform: rotate(-33.2deg) !important;
   }
 }
 

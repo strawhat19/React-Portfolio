@@ -27,7 +27,7 @@ function Resume() {
                 <li class="list-item"><div class="git iconRow slashContainer"><i class="fab fa-git-alt"></i> <span class="slashes">//</span> Git</div></li>
                 <li class="list-item"><div class="unity iconRow slashContainer"><i class="fab fa-unity"></i> <span class="slashes">//</span> Unity</div></li>
             </ul>
-            <button class="gameButton transition" onClick="openResume()">More Info</button>
+            <a class="gameButton transition" href="https://strawhat19.github.io/Portfolio/resume/Rakib-Ahmed-Coding-Resume.pdf" target="_blank">More Info</a>
         </div>
     </div>
     );
