@@ -68,24 +68,6 @@
         autoplay: true,
         path: 'https://assets8.lottiefiles.com/packages/lf20_NedRrA.json'
         })
-
-        window.addEventListener('DOMContentLoaded', (event) => {
-          const navLinks = document.querySelectorAll(`nav a`);
-          console.log(event);
-          console.log(navLinks);
-          navLinks.forEach(link => {
-            link.addEventListener(`click`, event => {
-              let currentPage = event.target.id;
-              localStorage.setItem(`Current Page`, currentPage);
-              console.log(currentPage);
-              renderPage();
-            })
-          })
-        });
-
-        function openResume() {
-          window.location.href = `https://strawhat19.github.io/Portfolio/resume/Rakib-Ahmed-Coding-Resume.pdf`;
-        }
     </script>
 </body>
 

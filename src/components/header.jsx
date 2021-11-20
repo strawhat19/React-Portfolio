@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navigation from './navigation';
 import Title from './title';
 
-function Header() {
+function Header({ currentPage, changeCurrentPage }) {
     return  (
     <header class="topbar">
         <Title />
-        <Navigation />
+        <Navigation currentPage={currentPage} changeCurrentPage={changeCurrentPage} />
     </header>
     );
 }

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Header from './header';
 import Homepage from './homepage';
 import About from './about';
@@ -13,17 +12,17 @@ function Main() {
         const renderPage = () => {
             switch (currentPage) {
                 case 'homepage':
-                    return <Homepage page={"homepage"} />;
+                    return <Homepage />;
                 case 'about':
-                    return <About page={"about"} />;
+                    return <About />;
                 case 'portfolio':
-                    return <Portfolio page={"portfolio"} />;
+                    return <Portfolio />;
                 case 'contact':
-                    return <Contact page={"contact"} />;
+                    return <Contact />;
                 case 'resume':
-                    return <Resume page={"resume"} />;
+                    return <Resume />;
                 default:
-                    return <Homepage page={"homepage"} />;
+                    return <Homepage />;
             }
         }
 
