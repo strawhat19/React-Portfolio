@@ -306,8 +306,8 @@ header {
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: 60px;
-  width: 30%;
+  top: -50px;
+  width: 32%;
 }
 
 header::before {
