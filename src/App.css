@@ -369,7 +369,7 @@ header::after {
 
 #animation path[fill="rgb(15,204,206)"] {
   opacity: 1;
-  stroke: #000;
+  stroke: #000 !important;
   -webkit-animation: stroke-dance 5s ease-in-out infinite alternate;
           animation: stroke-dance 5s ease-in-out infinite alternate;
 }

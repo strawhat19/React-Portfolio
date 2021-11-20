@@ -325,7 +325,7 @@ header::after {
   }
   path[fill="rgb(15,204,206)"] {
   opacity: 1;
-  stroke: #000;
+  stroke: #000 !important;
   animation: stroke-dance 5s ease-in-out infinite alternate;
   }
 }
