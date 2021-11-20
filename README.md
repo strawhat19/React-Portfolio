@@ -3,7 +3,7 @@ A portfolio created with React state and components.
 
 ![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<!-- ![Screenshot of Application](https://raw.githubusercontent.com/strawhat19/Fitness-Tracker/main/public/screenshot.JPG) -->
+![Screenshot of Application](./public/screenshot.jpg)
 
 ## **Table of Contents**
 * [Installation](#installation)

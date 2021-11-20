@@ -80,7 +80,7 @@
 
 ::selection {
     background: var(--react);
-    color: var(--soft);
+    color: #000;
 }
 
 #root {
@@ -316,7 +316,27 @@ header::after {
   right: 30px;
   top: 0;
   animation: rotate 15s linear infinite;
-  margin-top: -9em;
+  margin-top: -8em;
+}
+
+#animation {
+  path {
+    stroke-width: 4px;
+  }
+  path[fill="rgb(15,204,206)"] {
+  opacity: 1;
+  stroke: #000;
+  animation: stroke-dance 5s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes stroke-dance {
+  0% {
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-width: 35px;
+  }
 }
 
 @keyframes rotate {
