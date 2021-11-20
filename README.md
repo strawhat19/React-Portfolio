@@ -3,7 +3,7 @@ A portfolio created with React state and components.
 
 ![license MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-![Screenshot of Application](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/screenshot.JPG)
+![Screenshot of Application](https://raw.githubusercontent.com/strawhat19/React-Portfolio/main/public/assets/screenshot.JPG)
 
 ## **Table of Contents**
 * [Installation](#installation)

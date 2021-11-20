@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function Homepage() {
+    const [currentMode, setCurrentMode] = useState('#000000');
     return (
     <div class="contentContainer contain homepage">
         <div class="contentContainerTitle">
