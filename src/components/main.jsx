@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 class Main extends React.Component {
     render() { 
-        return     <main class="quizContainer contain">
+        return     <main>
                         <div class="quizBox contain">
                             <div class="quizBoxTitle">
-                                <h1 class="spacer">Coding <span class="boldSecondary">Quiz</span></h1>
+                                <h1 class="spacer"><i class="fab fa-react"></i> | React <span class="boldSecondary">Portfolio</span></h1>
                                 <div class="iconContainer outerIconContainer">
-                                    <div class="iconContainer" id="itemContainer">Time Remaining: 
-                                        <div class="customIcon transition timeRemaining" title="Time"></div>
-                                    </div>
-                                    <div class="iconContainer" id="itemContainer">Total Points: 
-                                        <div class="customIcon transition userPoints"title="Points">0</div>
-                                    </div>
+                                    <a class="showScoresLink hoverLine" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
+                                    <a class="showScoresLink hoverLine" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>
                                 </div>
                             </div>
-                            <div class="lineSep"></div>
-                            <h2>Javascript</h2>
-                            <p class="spacer">This is a <span class="totalQuestions" title="Total Questions"></span> question timed quiz to assess your knowledge of Javascript! The questions will cover topics such as:</p>
-                            <ul class="list-group">
-                                <li class="list-item">Variables</li>
-                                <li class="list-item">Event Listeners</li>
-                                <li class="list-item">DOM Maniplutaion</li>
-                                <li class="list-item">Functions</li>
-                                <li class="list-item">Local Storage</li>
-                                <li class="list-item">Query Selector</li>
-                                <li class="list-item">Arrays</li>
-                                <li class="list-item">Loops</li>
-                                <li class="list-item">Methods</li>
-                                <li class="list-item">Objects</li>
-                                <li class="list-item">Data Types</li>
-                                <li class="list-item">Create Element</li>
-                            </ul>
-                            <button class="gameButton transition">Click Here To Begin Game</button>
+                            <div class="content">
+                                <div class="lineSep"></div>
+                                <h2>Homepage</h2>
+                                <p class="spacer">Welcome to my React.js showcase and portfolio.</p>
+                                <ul class="list-group">
+                                    <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>
+                                    <li class="list-item"><div class="css iconRow slashContainer"><i class="fab fa-css3-alt"></i> <span class="slashes">//</span> CSS</div></li>
+                                    <li class="list-item"><div class="sass iconRow slashContainer"><i class="fab fa-sass"></i> <span class="slashes">//</span> SASS</div></li>
+                                    <li class="list-item"><div class="js iconRow slashContainer"><i class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div></li>
+                                    <li class="list-item"><div class="node iconRow slashContainer"><i class="fab fa-node-js"></i> <span class="slashes">//</span> Node</div></li>
+                                    <li class="list-item"><div class="sql iconRow slashContainer"><i class="fas fa-database"></i> <span class="slashes">//</span> SQL</div></li>
+                                    <li class="list-item"><div class="mongo iconRow slashContainer"><i class="fas fa-server"></i> <span class="slashes">//</span> MongoDB</div></li>
+                                    <li class="list-item"><div class="react iconRow slashContainer"><i class="fab fa-react"></i> <span class="slashes">//</span> React</div></li>
+                                    <li class="list-item"><div class="swift iconRow slashContainer"><i class="fab fa-swift"></i> <span class="slashes">//</span> Swift</div></li>
+                                    <li class="list-item"><div class="git iconRow slashContainer"><i class="fab fa-git-alt"></i> <span class="slashes">//</span> Git</div></li>
+                                    <li class="list-item"><div class="unity iconRow slashContainer"><i class="fab fa-unity"></i> <span class="slashes">//</span> Unity</div></li>
+                                </ul>
+                                <button class="gameButton transition">More Info</button>
+                            </div>
                         </div>
                     </main>;
     }

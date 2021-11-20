@@ -12,7 +12,7 @@
 }
 
 :root {
-    --react: #5fd9fb;
+    --react: #0fccce;
     --reactDark: #1f343a;
     --reactNavy: #033ee3;
     --correct: #00cc80;
@@ -25,6 +25,57 @@
     --neutralDarkGlass: rgb(18 130 166 / 70%);
     --silverGlass: rgb(75 81 85 / 85%);
     --blackGlass: rgb(0 0 0 / 65%);
+    --html: #f16529;
+    --css: #2862e9;
+    --js: #f7df1e;
+    --php: #7377ad;
+    // --react: #5ed3f3;
+    --node: #73ab60;
+    --sass: #f783ac;
+    --sql: #f783ac;
+    --mongo: #00684a;
+    --git: #e94e31;
+    --swift: #f4993a;
+}
+
+.html i {
+  color: var(--html);
+}
+
+.css i {
+  color: var(--css);
+}
+
+.js i {
+  color: var(--js);
+}
+
+.sass i {
+  color: var(--sass);
+}
+
+.sql i {
+  color: var(--sql);
+}
+
+.node i {
+  color: var(--node);
+}
+
+.mongo i {
+  color: var(--mongo);
+}
+
+.react i {
+  color: var(--react);
+}
+
+.git i {
+  color: var(--git);
+}
+
+.swift i {
+  color: var(--swift);
 }
 
 ::selection {
@@ -164,10 +215,6 @@ body {
     overflow: hidden;
 }
 
-.headerTitle {
-  width: 100%;
-}
-
 a {
     color: white !important;
     font-family: Noto Sans JP;
@@ -219,29 +266,29 @@ header {
   z-index: 1;
   position: relative;
   top: 50px;
-  width: 50%;
+  width: 30%;
 }
 
 header::before {
   content: '';
   position: absolute;
-  background: #5fd9fb;
-  width: 100%;
-  height: 138%;
+  background: var(--react);
+  width: 100.2%;
+  height: 140%;
   z-index: -1;
   top: -10px;
-  left: -53px;
-  clip-path: polygon(0% 0px, 90% 0%, 102% 100%, 0px 100%);
+  left: -28px;
+  clip-path: polygon(0% 0px, 90% 0%, 101.7% 104%, 0px 100%);
 }
 
 header::after {
   content: '';
   position: absolute;
-  background: #5fd9fb;
+  background: var(--react);
   width: 105%;
   height: 138%;
   z-index: -1;
-  top: 99%;
+  top: 108%;
   left: 0px;
   -webkit-clip-path: polygon(0% 0px, 90% 0%, 102% 100%, 0px 100%);
   clip-path: polygon(0% 0px, 100% 0%, 87% 100%, 0px 100%);
@@ -250,21 +297,26 @@ header::after {
 .headerTitle {
   background: #000;
   clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
-  width: 90%;
+  width: 93%;
   padding: 1em 0em 1em 2em;
   font-weight: 400;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
+.slashes {
+  color: var(--react);
+}
+
 #animation {
-  width: 55%;
+  width: 35%;
   height: 100%;
   position: absolute;
   z-index: 0;
-  right: -155px;
-  top: -155px;
+  right: 30px;
+  top: 0;
   animation: rotate 15s linear infinite;
+  margin-top: -9em;
 }
 
 @keyframes rotate {
@@ -310,6 +362,16 @@ footer {
     width: 100%;
 }
 
+footer::before {
+  content: '';
+  position: absolute;
+  top: -33%;
+  left: 0;
+  background: var(--react);
+  height: 32%;
+  width: 100%;
+}
+
 footer i, .vertical-sep {
     color: var(--react);
 }
@@ -325,7 +387,7 @@ main {
     flex-direction: column;
     justify-content: center;
     grid-gap: 50px;
-    align-items: center;
+    align-items: flex-start;
     /* Background Question Logo */
     /* background: linear-gradient(var(--reactDarkGlass),var(--reactDarkGlass)),url(/assets/images/Vectorquestion.svg); */
     background-repeat: no-repeat;
@@ -573,24 +635,64 @@ main {
 }
 
 .quizBox {
-    background: var(--blackGlass);
-    border-radius: 10px;
-    backdrop-filter: blur(8px);
+  background: var(--blackGlass);
+  border-radius: 0px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  width: 75%;
+  border: 10px solid var(--react);
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
+  position: relative;
+  margin-top: 2em;
+}
+
+.content {
+  width: 93%;
+}
+
+.content .lineSep {
+  width: 84%;
+}
+
+.quizBox::before {
+  content: '';
+  position: absolute;
+  background: var(--react);
+  width: 12px;
+  height: 158%;
+  z-index: -1;
+  top: -112px;
+  padding: 0em 0em;
+  right: 11.8%;
+  transform: rotate(-39.5deg);
 }
 
 .quizBoxTitle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-gap: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 45px;
+  width: 75%;
 }
 
 .iconContainer {
-    display: flex;
-    justify-content: space-between;
-    min-width: 140px;
-    align-items: center;
-    grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 140px;
+  align-items: center;
+  grid-gap: 35px;
+  font-size: 1.5em;
+}
+
+.quizBoxTitle i {
+  color: var(--react);
+}
+
+.iconContainer i {
+  color: var(--react);
 }
 
 .customIcon {
@@ -669,7 +771,7 @@ span, p {
     font-size: 13px;
     font-weight: 300;
     flex-wrap: wrap;
-    list-style: inside;
+    list-style: none;
     min-height: 150px;
     height: 150px;
     max-height: 300px;
@@ -734,28 +836,32 @@ background: var(--react);
 }
 
 .gameButton {
-    padding: 0.55em;
-    width: 100%;
-    display: block;
-    float: none;
-    clear: both;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 20px;
-    outline: none;
-    border: 3px solid var(--react);
-    background: transparent !important;
-    color: #fff;
-    font-weight: 500;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    font-size: 0.7em;
+  padding: 0.55em;
+  width: 95%;
+  display: block;
+  float: none;
+  clear: both;
+  text-align: center;
+  border-radius: 0px;
+  outline: none;
+  border: 7px solid var(--react);
+  background: transparent !important;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  /* transform: skewY(-2deg); */
+  transform: skewx(
+-20deg);
 }
 
 .gameButton:hover {
-    background: var(--react) !important;
-    color: white;
-    cursor: pointer;
+  background: var(--react) !important;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 150ms ease-in-out;
 }
 
 /* Media Queries */
