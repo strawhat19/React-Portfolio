@@ -306,7 +306,7 @@ header {
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: 110px;
+  top: 60px;
   width: 30%;
 }
 
@@ -874,7 +874,7 @@ main {
   -webkit-clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
           clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
   position: relative;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 .content {
@@ -1334,6 +1334,24 @@ span, p {
   }
   .siteText {
     display: none;
+  }
+}
+
+@media (max-width: 1536px) {
+  .header {
+    top: 10px;
+    width: 40%;
+  }
+  .quizBox {
+    margin-top: -5em;
+  }
+  .quizBox::before {
+    width: 12px;
+    height: 158%;
+    top: -112px;
+    right: 11.45%;
+    -webkit-transform: rotate(-33.5deg);
+            transform: rotate(-33.5deg);
   }
 }
 /*# sourceMappingURL=App.css.map */
