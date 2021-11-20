@@ -1,5 +1,3 @@
-# Bucket List App
-
 # React-Portfolio
 A portfolio created with React state and components.
 
