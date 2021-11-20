@@ -740,7 +740,7 @@ span, p {
     height: 3% !important;
     width: 100% !important;
     top: 0 !important;
-    right: 23.9% !important;
+    right: -23.9% !important;
     -webkit-transform: rotate(57.4deg) !important;
             transform: rotate(57.4deg) !important;
   }
