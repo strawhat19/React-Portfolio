@@ -376,18 +376,22 @@ header::after {
 
 @-webkit-keyframes stroke-dance {
   0% {
+    stroke: #000 !important;
     stroke-width: 8px;
   }
   100% {
+    stroke: #000 !important;
     stroke-width: 35px;
   }
 }
 
 @keyframes stroke-dance {
   0% {
+    stroke: #000 !important;
     stroke-width: 8px;
   }
   100% {
+    stroke: #000 !important;
     stroke-width: 35px;
   }
 }
