@@ -726,7 +726,7 @@ span, p {
     width: 40%;
   }
   .contentContainer {
-    margin-top: -8em;
+    margin-top: -8.4em;
   }
   .contentContainer::before {
     width: 12px !important;
@@ -735,6 +735,14 @@ span, p {
     right: 11.5% !important;
     -webkit-transform: rotate(-33.2deg) !important;
             transform: rotate(-33.2deg) !important;
+  }
+  .contentContainer.about::after {
+    height: 3% !important;
+    width: 100% !important;
+    top: 0 !important;
+    right: 23.9% !important;
+    -webkit-transform: rotate(57.4deg) !important;
+            transform: rotate(57.4deg) !important;
   }
 }
 

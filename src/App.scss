@@ -580,7 +580,7 @@ span, p {
   }
 
   .contentContainer {
-    margin-top: -8em;
+    margin-top: -8.4em;
     &::before {
       width: 12px !important;
       height: 158% !important;
@@ -588,6 +588,14 @@ span, p {
       right: 11.5% !important;
       transform: rotate(-33.2deg) !important;
     }
+  }
+
+  .contentContainer.about::after {
+    height: 3% !important;
+    width: 100% !important;
+    top: 0 !important;
+    right: 23.9% !important;
+    transform: rotate(57.4deg) !important;
   }
 
 }
