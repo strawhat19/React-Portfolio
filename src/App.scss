@@ -265,7 +265,7 @@ header {
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: 50px;
+  top: 110px;
   width: 30%;
 }
 
@@ -316,7 +316,7 @@ header::after {
   right: 30px;
   top: 0;
   animation: rotate 15s linear infinite alternate;
-  margin-top: -8em;
+  margin-top: -5em;
 }
 
 #animation {
@@ -668,7 +668,7 @@ main {
   border-bottom-left-radius: 0;
   clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
   position: relative;
-  margin-top: 2em;
+  margin-top: 6em;
 }
 
 .content {
