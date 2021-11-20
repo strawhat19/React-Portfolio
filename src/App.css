@@ -1338,7 +1338,7 @@ span, p {
 }
 
 @media (max-width: 1536px) {
-  .header {
+  header {
     top: 10px;
     width: 40%;
   }
