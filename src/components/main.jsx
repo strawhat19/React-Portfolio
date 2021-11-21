@@ -8,31 +8,31 @@ import Contact from './contact';
 import Footer from './footer';
 
 function Main() { 
-        const [currentPage, setCurrentPage] = useState('homepage');
+        const [currentState, setCurrentState] = useState('homePage');
 
-        const handlePage = () => {
-            switch (currentPage) {
-                case 'homepage':
+        const handleState = () => {
+            switch (currentState) {
+                case 'homePage':
                     return <Homepage />;
-                case 'about':
+                case 'aboutPage':
                     return <About />;
-                case 'portfolio':
+                case 'portfolioPage':
                     return <Portfolio />;
-                case 'contact':
+                case 'contactPage':
                     return <Contact />;
-                case 'resume':
+                case 'resumePage':
                     return <Resume />;
                 default:
                     return <Homepage />;
             }
         }
 
-        const changeCurrentPage = (page) => setCurrentPage(page);
+        const changeCurrentState = (state) => setCurrentState(state);
 
         return (
         <main className="app">
-        <Header currentPage={currentPage} changeCurrentPage={changeCurrentPage}/>
-            {handlePage()}
+        <Header currentState={currentState} changeCurrentState={changeCurrentState}/>
+            {handleState()}
         <Footer />
         </main>
         );

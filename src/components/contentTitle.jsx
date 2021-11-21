@@ -3,11 +3,12 @@ import React, {useState} from 'react';
 function ContentTitle() {
 
     const handleTitle = (label) => {
-        label = document.querySelector('#contentLabel');
+
+        label = 'homePage';
 
         switch (label) {
             default:
-            case 'homepage':
+            case 'homePage':
                 return (
                     <div class="homePage">
                         <h1 class="spacer homePage">
@@ -16,7 +17,7 @@ function ContentTitle() {
                         </h1>
                     </div>
                 );
-            case 'about':
+            case 'aboutPage':
                 return (
                     <div class="aboutPage">
                         <h1 class="spacer aboutPage">
@@ -25,29 +26,30 @@ function ContentTitle() {
                         </h1>
                     </div>
                 );
-            case 'portfolio':
+            case 'portfolioPage':
                 return (
                     <h1 class="spacer portfolioPage">
                         <i class="fab fa-react"></i> | My 
                         <span class="boldSecondary"> Apps</span>
                     </h1>
                 );
-            case 'contact':
+            case 'contactPage':
                 return (
                     <h1 class="spacer contactPage">
                         <i class="fab fa-react"></i> | Get In 
                         <span class="boldSecondary"> Touch</span>
                     </h1>
                 );
-            case 'resume':
+            case 'resumePage':
                 return (
                     <h1 class="spacer resumePage">
                         <i class="fab fa-react"></i> | My 
                         <span class="boldSecondary"> Resume</span>
                     </h1>
                 );
-        }
+            }
     }
+        
 
     const handleColorChange = (bodyBG) => {
         bodyBG = document.body.className;

@@ -7,7 +7,7 @@ function Contact() {
             <ContentTitle />
             <div class="content">
                 <div class="lineSep"></div>
-                <h2>Contact</h2>
+                <h2 id="grabLabel" class="contactPage">Contact</h2>
                 <p class="spacer">Get in touch with me.</p>
                 <ul class="list-group">
                     <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>

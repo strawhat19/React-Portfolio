@@ -7,7 +7,7 @@ function Homepage() {
         <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>
-            <h2>Homepage</h2>
+            <h2 id="grabLabel" class="homePage">Homepage</h2>
             <p class="spacer">Welcome to my React.js showcase and portfolio.</p>
             <ul class="list-group">
                 <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>

@@ -7,7 +7,7 @@ function Portfolio() {
         <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>
-            <h2>Portfolio</h2>
+            <h2 id="grabLabel" class="portfolioPage">Portfolio</h2>
             <p class="spacer">Here is my Portfolio.</p>
             <ul class="list-group">
                 <li class="list-item"><div class="html iconRow slashContainer"><i class="fab fa-html5"></i> <span class="slashes">//</span> HTML</div></li>
