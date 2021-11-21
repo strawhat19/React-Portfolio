@@ -1,10 +1,10 @@
 import React from 'react';
 import ContentTitle from './contentTitle';
 
-function About() {
+function About({label, changeLabel}) {
     return (
     <div id="contentLabel" data-label="about" class="contentContainer contain about">
-        <ContentTitle />
+        <ContentTitle label={label} changeLabel={changeLabel} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="aboutPage">About</h2>

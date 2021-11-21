@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 
 function ContentTitle() {
 
-    const handleTitle = (label) => {
+    const [label, setLabel] = useState('homePage');
 
-        label = 'homePage';
+    const handleLabel = () => {
 
         switch (label) {
             default:
@@ -50,6 +50,7 @@ function ContentTitle() {
             }
     }
         
+    // const changeLabel = (label) => setLabel(label);
 
     const handleColorChange = (bodyBG) => {
         bodyBG = document.body.className;
@@ -96,7 +97,7 @@ function ContentTitle() {
 
     return (
         <div class="contentContainerTitle">
-            {handleTitle()}
+            {handleLabel()}
             <div class="iconContainer outerIconContainer">
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>

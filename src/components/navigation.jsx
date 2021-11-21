@@ -6,18 +6,23 @@ function Navigation({currentState, changeCurrentState}, classes) {
 
     function homeState() {
         changeCurrentState('homePage');
+        // changeLabel('homePage');
     }
     function aboutState() {
         changeCurrentState('aboutPage');
+        // changeLabel('aboutPage');
     }
     function portfolioState() {
         changeCurrentState('portfolioPage');
+        // changeLabel('portfolioPage');
     }
     function contactState() {
         changeCurrentState('contactPage');
+        // changeLabel('contactPage');
     }
     function resumeState() {
         changeCurrentState('resumePage');
+        // changeLabel('resumePage');
     }
 
     return (

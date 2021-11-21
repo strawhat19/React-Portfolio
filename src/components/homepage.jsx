@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import ContentTitle from './contentTitle';
 
-function Homepage() {
+function Homepage({label, changeLabel}) {
     return (
     <div id="contentLabel" data-label="homepage" class="contentContainer contain homepage">
-        <ContentTitle />
+        <ContentTitle label={label} changeLabel={changeLabel} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="homePage">Homepage</h2>
