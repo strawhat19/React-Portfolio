@@ -19,6 +19,7 @@
   --soft: #dcd9d4;
   --gray: #181a1b;
   --silver: #4b5155;
+  --navyMatte: #01154f;
   /* Add Backdrop Filter of 8px to Create Glass Effect on Elements */
   --neutralGlass: rgb(0 194 255 / 40%);
   --neutralDarkGlass: rgb(18 130 166 / 70%);
@@ -94,7 +95,7 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background: #1f343a;
+  background-color: #1f343a;
   overflow: hidden;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
@@ -258,15 +259,30 @@ main {
   margin: 195px 0;
 }
 
+#animation {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
 #animation path {
   stroke-width: 4px;
 }
 
 #animation path[fill="rgb(15,204,206)"] {
   opacity: 1;
-  stroke: black !important;
+  stroke: black;
   -webkit-animation: stroke-dance 5s ease-in-out infinite alternate;
           animation: stroke-dance 5s ease-in-out infinite alternate;
+}
+
+.light path {
+  stroke: var(--navyMatte);
+}
+
+.light path[fill="rgb(15,204,206)"] {
+  stroke: var(--navyMatte) !important;
+  -webkit-animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
+          animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
 }
 
 @-webkit-keyframes stroke-dance {
@@ -287,6 +303,28 @@ main {
   }
   100% {
     stroke: black !important;
+    stroke-width: 35px;
+  }
+}
+
+@-webkit-keyframes stroke-dance-light {
+  0% {
+    stroke: #01154f !important;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke: #01154f !important;
+    stroke-width: 35px;
+  }
+}
+
+@keyframes stroke-dance-light {
+  0% {
+    stroke: #01154f !important;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke: #01154f !important;
     stroke-width: 35px;
   }
 }
@@ -522,7 +560,15 @@ input[type=range]::-webkit-slider-thumb {
   padding: 3em;
 }
 
+.designer .contentContainer {
+  background: var(--navyMatte);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
 .contentContainer {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
   background: black;
   border-radius: 0px;
   -webkit-backdrop-filter: blur(8px);

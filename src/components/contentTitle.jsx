@@ -2,41 +2,46 @@ import React, {useState} from 'react';
 
 function ContentTitle() {
 
-    const handleColor = (currentColor) => {
-        currentColor = document.querySelector('footer').classList[1];
-        console.log(currentColor);
-
-        // let blacks = document.querySelectorAll('.black');
-        // let animationStroke = document.querySelector('#animation path[fill="rgb(15,204,206)"]');
-        // let contentContainer = document.querySelector(`.contentContainer`);
-
-        // const colorChange = (currentColor) => {
-        //     blacks.forEach(element => {
-        //         element.style.background = '#01154f';
-        //     })
-    
-        //     animationStroke.stroke = '#01154f';
-        //     contentContainer.style.background = '#01154f';
-        // }
-
-        // switch(currentColor) {
-        //     case 'black':
-        //         colorChange(currentColor);
-        //         break;
-        //     case 'navy':
-        //         colorChange(currentColor);
-        //         break;
-        // }
-    }
-
-    const handleColorChange = (bodyBG, currentColor) => {
-        bodyBG = document.body.style.background; 
+    const handleColorChange = (bodyBG) => {
+        bodyBG = document.body.className;
 
         switch(bodyBG) {
-            case 'rgb(31, 52, 58)': // Dark Blue
-                return document.body.style.background = '#033ee3';
-            case 'rgb(3, 62, 227)': // Light Blue
-                return document.body.style.background = '#1f343a';
+            case 'developer':
+                switchLight();
+                break;
+            case 'designer':
+                switchDark();
+                break;
+        }
+
+        function switchLight() {
+            let animation = document.querySelector('#animation');
+            let blacks = document.querySelectorAll('.black');
+            let contentContainer = document.querySelector(`.contentContainer`);
+            contentContainer.style.background = '#01154f';
+            document.body.style.background = 'rgb(3, 62, 227)';
+            document.body.classList.remove('developer');
+            document.body.classList.add('designer');
+            animation.classList.remove('dark');
+            animation.classList.add('light');
+            blacks.forEach(element => {
+                element.style.background = '#01154f';
+            })
+        }
+
+        function switchDark() {
+            let animation = document.querySelector('#animation');
+            let blacks = document.querySelectorAll('.black');
+            let contentContainer = document.querySelector(`.contentContainer`);
+            contentContainer.style.background = '#000';
+            document.body.style.background = 'rgb(31, 52, 58)';
+            document.body.classList.remove('designer');
+            document.body.classList.add('developer');
+            animation.classList.remove('light');
+            animation.classList.add('dark');
+            blacks.forEach(element => {
+                element.style.background = '#000';
+            })
         }
     }
 
