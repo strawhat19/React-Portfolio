@@ -76,6 +76,10 @@ body {
   transition: 300ms ease-in-out;
 }
 
+a i {
+  color: var(--react);
+}
+
 a {
   color: white !important;
   font-family: Noto Sans JP;

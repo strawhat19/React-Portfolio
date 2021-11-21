@@ -101,6 +101,10 @@ body {
   transition: 300ms ease-in-out;
 }
 
+a i {
+  color: var(--react);
+}
+
 a {
   color: white !important;
   font-family: Noto Sans JP;
@@ -282,6 +286,10 @@ main {
           animation: stroke-dance 5s ease-in-out infinite alternate;
 }
 
+.light {
+  position: relative;
+}
+
 .light path {
   stroke: var(--react);
 }
@@ -291,6 +299,16 @@ main {
   -webkit-animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
           animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
   fill-opacity: 0 !important;
+}
+
+.light::before {
+  content: '';
+  background: url();
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @-webkit-keyframes stroke-dance {
