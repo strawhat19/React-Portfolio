@@ -8,6 +8,7 @@ import Contact from './contact';
 import Footer from './footer';
 
 function Main() { 
+    
         const [currentState, setCurrentState] = useState('homePage');
 
         const handleState = () => {
