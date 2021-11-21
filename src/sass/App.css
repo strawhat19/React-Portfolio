@@ -234,7 +234,7 @@ nav {
   top: 0;
   -webkit-animation: rotate 15s linear infinite alternate;
           animation: rotate 15s linear infinite alternate;
-  margin-top: -5em;
+  margin-top: -8em;
 }
 
 main {
@@ -265,24 +265,32 @@ main {
 }
 
 #animation path {
-  stroke-width: 4px;
+  stroke-width: 11px;
+  fill-opacity: 0;
+  opacity: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0 0%;
+  stroke-dashoffset: 20%;
 }
 
 #animation path[fill="rgb(15,204,206)"] {
   opacity: 1;
   stroke: black;
+  fill-opacity: 1;
   -webkit-animation: stroke-dance 5s ease-in-out infinite alternate;
           animation: stroke-dance 5s ease-in-out infinite alternate;
 }
 
 .light path {
-  stroke: var(--navyMatte);
+  stroke: var(--react);
 }
 
 .light path[fill="rgb(15,204,206)"] {
   stroke: var(--navyMatte) !important;
   -webkit-animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
           animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
+  fill-opacity: 0 !important;
 }
 
 @-webkit-keyframes stroke-dance {

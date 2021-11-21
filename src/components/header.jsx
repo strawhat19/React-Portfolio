@@ -4,7 +4,7 @@ import Title from './title';
 
 function Header({ currentState, changeCurrentState }) {
     return  (
-    <header class="topbar">
+    <header class="slantNav">
         <Title />
         <Navigation currentState={currentState} changeCurrentState={changeCurrentState} />
     </header>
