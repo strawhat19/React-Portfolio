@@ -1,33 +1,11 @@
 import React, {useState} from 'react';
+import ContentTitle from './contentTitle';
 
 function Homepage() {
 
-    const handleColorChange = (bodyBG) => {
-        bodyBG = document.body.style.background; 
-        
-        switch(bodyBG) {
-            case `var(--reactNavy)`:
-                return bodyBG = `var(--reactDark)`;
-            case `var(--reactDark)`:
-                return bodyBG = `var(--reactNavy)`;
-            case `#033ee3`:
-                return bodyBG = `#1f343a`;
-            case `#1f343a`:
-                return bodyBG = `#033ee3`;
-            default:
-                return bodyBG = `#1f343a`;
-        }
-    }
-
     return (
     <div class="contentContainer contain homepage">
-        <div class="contentContainerTitle">
-            <h1 class="spacer"><i class="fab fa-react"></i> | React <span class="boldSecondary">Portfolio</span></h1>
-            <div class="iconContainer outerIconContainer">
-                <a onClick={handleColorChange} class="showScoresLink hoverLine" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
-                <a onClick={handleColorChange} class="showScoresLink hoverLine" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>
-            </div>
-        </div>
+        <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>
             <h2>Homepage</h2>

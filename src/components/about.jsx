@@ -1,15 +1,10 @@
 import React from 'react';
+import ContentTitle from './contentTitle';
 
 function About() {
     return (
     <div class="contentContainer contain about">
-        <div class="contentContainerTitle">
-            <h1 class="spacer"><i class="fab fa-react"></i> | React <span class="boldSecondary">Portfolio</span></h1>
-            <div class="iconContainer outerIconContainer">
-                <a class="showScoresLink hoverLine" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
-                <a class="showScoresLink hoverLine" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>
-            </div>
-        </div>
+        <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>
             <h2>About</h2>

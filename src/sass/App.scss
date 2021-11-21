@@ -24,7 +24,6 @@
   --neutralGlass: rgb(0 194 255 / 40%);
   --neutralDarkGlass: rgb(18 130 166 / 70%);
   --silverGlass: rgb(75 81 85 / 85%);
-  // --blackGlass: rgb(0 0 0 / 65%);
   --html: #f16529;
   --css: #2862e9;
   --js: #f7df1e;
@@ -37,9 +36,16 @@
   --swift: #f4993a;
 }
 
+  .black, ::selection, #animation path[fill="rgb(15,204,206)"], footer, .contentContainer, .customIcon, .gameButton:hover {
+    // stroke: #01154f !important;
+    // background: #01154f !important;
+    // color: #01154f !important;
+    transition: 300ms ease-in-out !important;
+  }
+
 ::selection {
   background: var(--react);
-  color: #000;
+  color: black;
 }
 
 ::placeholder {
@@ -64,8 +70,9 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-content: center;
-  background: var(--reactDark);
+  background: #1f343a;
   overflow: hidden;
+  transition: 300ms ease-in-out;
 }
 
 a {
@@ -148,7 +155,7 @@ header::after {
 }
 
 .headerTitle {
-  background: #000;
+  background: black;
   clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
   width: 93%;
   padding: 1em 0em 1em 2em;
@@ -163,7 +170,7 @@ header::after {
 
 
 nav {
-  background: #000;
+  background: black;
   clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
   width: 100%;
   display: flex;
@@ -203,18 +210,18 @@ main {
   }
   path[fill="rgb(15,204,206)"] {
   opacity: 1;
-  stroke: #000 !important;
+  stroke: black !important;
   animation: stroke-dance 5s ease-in-out infinite alternate;
   }
 }
 
 @keyframes stroke-dance {
   0% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 8px;
   }
   100% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 35px;
   }
 }
@@ -229,7 +236,7 @@ main {
 }
 
 footer {
-  background: #000;
+  background: black;
   height: 40px;
   backdrop-filter: blur(8px);
   display: flex;
@@ -383,7 +390,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .contentContainer {
-  background: #000;
+  background: black;
   border-radius: 0px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -464,7 +471,7 @@ p.spacer {
 
 .customIcon {
   font-size: 1em;
-  color: #000000;
+  color: black;
   background: white;
   border: 3px solid var(--react);
   border-radius: 100%;

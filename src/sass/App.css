@@ -35,14 +35,24 @@
   --swift: #f4993a;
 }
 
+.black, ::-moz-selection, #animation path[fill="rgb(15,204,206)"], footer, .contentContainer, .customIcon, .gameButton:hover {
+  -webkit-transition: 300ms ease-in-out !important;
+  transition: 300ms ease-in-out !important;
+}
+
+.black, ::selection, #animation path[fill="rgb(15,204,206)"], footer, .contentContainer, .customIcon, .gameButton:hover {
+  -webkit-transition: 300ms ease-in-out !important;
+  transition: 300ms ease-in-out !important;
+}
+
 ::-moz-selection {
   background: var(--react);
-  color: #000;
+  color: black;
 }
 
 ::selection {
   background: var(--react);
-  color: #000;
+  color: black;
 }
 
 ::-webkit-input-placeholder {
@@ -84,8 +94,10 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background: var(--reactDark);
+  background: #1f343a;
   overflow: hidden;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 a {
@@ -182,7 +194,7 @@ header::after {
 }
 
 .headerTitle {
-  background: #000;
+  background: black;
   -webkit-clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
           clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
   width: 93%;
@@ -197,7 +209,7 @@ header::after {
 }
 
 nav {
-  background: #000;
+  background: black;
   -webkit-clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
           clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
   width: 100%;
@@ -252,29 +264,29 @@ main {
 
 #animation path[fill="rgb(15,204,206)"] {
   opacity: 1;
-  stroke: #000 !important;
+  stroke: black !important;
   -webkit-animation: stroke-dance 5s ease-in-out infinite alternate;
           animation: stroke-dance 5s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes stroke-dance {
   0% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 8px;
   }
   100% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 35px;
   }
 }
 
 @keyframes stroke-dance {
   0% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 8px;
   }
   100% {
-    stroke: #000 !important;
+    stroke: black !important;
     stroke-width: 35px;
   }
 }
@@ -302,7 +314,7 @@ main {
 }
 
 footer {
-  background: #000;
+  background: black;
   height: 40px;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -511,7 +523,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .contentContainer {
-  background: #000;
+  background: black;
   border-radius: 0px;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
@@ -607,7 +619,7 @@ p.spacer {
 
 .customIcon {
   font-size: 1em;
-  color: #000000;
+  color: black;
   background: white;
   border: 3px solid var(--react);
   border-radius: 100%;

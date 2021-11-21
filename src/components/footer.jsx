@@ -4,7 +4,7 @@ function Footer() {
     const date = new Date();
     const year = date.getFullYear();
     return (
-    <footer class="footer">
+    <footer class="footer black">
         <div class="nameText">
             <a href="https://github.com/strawhat19" target="_blank" class="hoverLine" title="GitHub"><i class="fab fa-github"></i> | Rakib Ahmed</a>
         </div>

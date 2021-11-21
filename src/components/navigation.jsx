@@ -1,8 +1,9 @@
 import React from "react";
 
-function Navigation({ currentPage, changeCurrentPage }) {
+function Navigation({ currentPage, changeCurrentPage }, classes) {
+    classes = `black ${currentPage}`;
     return (
-    <nav className={currentPage}>
+    <nav className={classes}>
         <a onClick={() => changeCurrentPage('homepage')} class="home homeLink hoverLine" id="homepage" title="Home"><i class="fas fa-home home"></i> | Home</a>
         <a onClick={() => changeCurrentPage('about')} class="navLink hoverLine" id="about" title="About"><i class="fas fa-address-card"></i> | About</a>
         <a onClick={() => changeCurrentPage('portfolio')} class="navLink hoverLine" id="portfolio" title="Portfolio"><i class="fas fa-project-diagram"></i> | Portfolio</a>
