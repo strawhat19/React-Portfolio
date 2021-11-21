@@ -189,7 +189,7 @@ nav {
   right: 30px;
   top: 0;
   animation: rotate 15s linear infinite alternate;
-  margin-top: -5em;
+  margin-top: -8em;
 }
 
 main {
@@ -208,23 +208,41 @@ main {
 #animation {
   transition: 300ms ease-in-out;
   path {
-    stroke-width: 4px;
+    stroke-width: 11px;
+    fill-opacity: 0;
+    opacity: 1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 0 0%;
+    stroke-dashoffset: 20%;
   }
   path[fill="rgb(15,204,206)"] {
   opacity: 1;
   stroke: black;
+  fill-opacity: 1;
   animation: stroke-dance 5s ease-in-out infinite alternate;
   }
 }
 
 .light {
+  position: relative;
   path {
-    stroke: var(--navyMatte);
+    stroke: var(--react);
   }
     path[fill="rgb(15,204,206)"] {
     stroke: var(--navyMatte) !important;
     animation: stroke-dance-light 5s ease-in-out infinite alternate !important;
-}
+    fill-opacity: 0 !important;
+  }
+  &::before {
+    content: '';
+    background: url();
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @keyframes stroke-dance {
