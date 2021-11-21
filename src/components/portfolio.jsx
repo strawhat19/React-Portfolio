@@ -3,7 +3,7 @@ import ContentTitle from './contentTitle';
 
 function Portfolio() {
     return (
-    <div class="contentContainer contain portfolio">
+    <div id="contentLabel" data-label="portfolio" class="contentContainer contain portfolio">
         <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>

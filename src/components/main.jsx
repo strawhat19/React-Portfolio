@@ -10,7 +10,7 @@ import Footer from './footer';
 function Main() { 
         const [currentPage, setCurrentPage] = useState('homepage');
 
-        const renderPage = () => {
+        const handlePage = () => {
             switch (currentPage) {
                 case 'homepage':
                     return <Homepage />;
@@ -32,7 +32,7 @@ function Main() {
         return (
         <main className="app">
         <Header currentPage={currentPage} changeCurrentPage={changeCurrentPage}/>
-            {renderPage()}
+            {handlePage()}
         <Footer />
         </main>
         );

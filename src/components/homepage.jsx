@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 import ContentTitle from './contentTitle';
 
 function Homepage() {
-
     return (
-    <div class="contentContainer contain homepage">
+    <div id="contentLabel" data-label="homepage" class="contentContainer contain homepage">
         <ContentTitle />
         <div class="content">
             <div class="lineSep"></div>
