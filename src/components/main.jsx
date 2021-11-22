@@ -33,9 +33,11 @@ function Main() {
 
         return (
         <main className="app">
-        <Avatar />
-        <Header currentState={currentState} changeCurrentState={changeCurrentState} />
-            {handleState()}
+            <div className="appMain">
+                <Avatar />
+                <Header currentState={currentState} changeCurrentState={changeCurrentState} />
+                    {handleState()}
+            </div>
         <Footer />
         </main>
         );
