@@ -83,4 +83,22 @@
   -webkit-clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
           clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
 }
+
+.avatar:nth-child(2) {
+  position: absolute;
+  top: 46px;
+  left: 667px;
+  width: 33%;
+  -webkit-transform: scale(0.888) rotate(-0.1deg);
+          transform: scale(0.888) rotate(-0.1deg);
+}
+
+.avatar:nth-child(2)::before {
+  background: black;
+  top: -9px;
+}
+
+.avatar:nth-child(2)::after {
+  background: black;
+}
 /*# sourceMappingURL=avatar.css.map */
