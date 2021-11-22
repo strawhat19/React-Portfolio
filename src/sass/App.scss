@@ -38,9 +38,6 @@
 }
 
   .black, ::selection, #animation path[fill="rgb(15,204,206)"], footer, .contentContainer, .customIcon, .gameButton:hover {
-    // stroke: #01154f !important;
-    // background: #01154f !important;
-    // color: #01154f !important;
     transition: 300ms ease-in-out !important;
   }
 
@@ -118,71 +115,8 @@ a:hover {
   transform: scale(1,1);
 }
 
-header {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-family: 'Montserrat';
-  font-weight: 300 !important;
-  font-size: 13px;
-  grid-gap: 10px;
-  z-index: 1;
-  position: relative;
-  top: -120px;
-  width: 32%;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  background: var(--react);
-  width: 100.2%;
-  height: 140%;
-  z-index: -1;
-  top: -10px;
-  left: -28px;
-  clip-path: polygon(0% 0px, 90% 0%, 101.7% 104%, 0px 100%);
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  background: var(--react);
-  width: 105%;
-  height: 138%;
-  z-index: -1;
-  top: 108%;
-  left: 0px;
-  -webkit-clip-path: polygon(0% 0px, 90% 0%, 102% 100%, 0px 100%);
-  clip-path: polygon(0% 0px, 100% 0%, 87% 100%, 0px 100%);
-}
-
-.headerTitle {
-  background: black;
-  clip-path: polygon(0% 0px, 90% 0%, 100% 100%, 0px 100%);
-  width: 93%;
-  padding: 1em 0em 1em 2em;
-  font-weight: 400;
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
-
 .slashes {
   color: var(--react);
-}
-
-
-nav {
-  background: black;
-  clip-path: polygon(0% 0px, 100% 0%, 90% 100%, 0px 100%);
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  grid-gap: 2em;
-  padding: 1.5em 0em 1.5em 3em;
-  font-family: 'Noto Sans JP' !important;
 }
 
 #animation {
@@ -190,10 +124,10 @@ nav {
   height: 100%;
   position: absolute;
   z-index: 0;
-  right: 30px;
+  right: 20px;
   top: 0;
   animation: rotate 15s linear infinite alternate;
-  margin-top: -8em;
+  margin-top: 0em;
 }
 
 main {
@@ -278,39 +212,6 @@ main {
   100% {
     transform: rotate(360deg);
   }
-}
-
-footer {
-  background: black;
-  height: 40px;
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px;
-  flex-wrap: wrap;
-  font-family: Noto Sans JP;
-  font-weight: 300 !important;
-  font-size: 13px;
-  grid-gap: 10px;
-  z-index: 1;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-footer::before {
-  content: '';
-  position: absolute;
-  top: -25%;
-  left: 0;
-  background: var(--react);
-  height: 25%;
-  width: 100%;
-}
-
-footer i, .vertical-sep {
-  color: var(--react);
 }
 
 .html i {
@@ -452,22 +353,22 @@ input[type=range]::-webkit-slider-thumb {
   border-bottom-left-radius: 0;
   clip-path: polygon(0% 0px, 73% 0%, 100% 100%, 0px 100%);
   position: relative;
-  margin-top: -2em;
-  max-height: 560px !important;
-  min-height: 560px !important;
-}
-
-.contentContainer::before {
-  content: '';
-  position: absolute;
-  background: var(--react);
-  width: 12px;
-  height: 158%;
-  z-index: -1;
-  top: -112px;
-  padding: 0em 0em;
-  right: 10.7%;
-  transform: rotate(-34.8deg);
+  margin-top: -5em;
+  max-height: 630px !important;
+  min-height: 630px !important;
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--react);
+    width: 12px;
+    height: 158%;
+    z-index: -1;
+    top: -112px;
+    padding: 0em 0em;
+    right: 0%;
+    margin-right: 10.1%;
+    transform: rotate(-31.8deg);
+  }
 }
 
 .content {
@@ -620,11 +521,6 @@ span, p {
 }
 
 @media (max-width: 1536px) {
-
-  header {
-    top: -185px;
-    width: 40%;
-  }
 
   .contentContainer {
     margin-top: -8.4em;

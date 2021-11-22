@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import Header from './header';
-import Homepage from './homepage';
-import About from './about';
-import Resume from './resume';
-import Portfolio from './portfolio';
-import Contact from './contact';
-import Footer from './footer';
+import Header from './Header/header';
+import Homepage from './States/homepage';
+import About from './States/about';
+import Resume from './States/resume';
+import Portfolio from './States/portfolio';
+import Contact from './States/contact';
+import Footer from './Footer/footer';
+import Avatar from './Avatar/avatar';
 
 function Main() { 
 
@@ -32,6 +33,7 @@ function Main() {
 
         return (
         <main className="app">
+        <Avatar />
         <Header currentState={currentState} changeCurrentState={changeCurrentState} />
             {handleState()}
         <Footer />
