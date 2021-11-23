@@ -1,5 +1,5 @@
 .avatar {
-  height: 60px;
+  height: 57px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,9 +17,18 @@
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: -8.7em;
+  top: -9.1em;
   right: -52em;
   width: 32%;
+}
+
+@media (max-width: 1536px) {
+  .avatar .avatar {
+    top: -9.65em;
+  }
+  .avatar .avatar:nth-child(2) {
+    top: 34px;
+  }
 }
 
 .avatar .bioPic {

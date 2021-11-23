@@ -500,6 +500,14 @@ input[type=range]::-webkit-slider-thumb {
   min-height: 630px !important;
 }
 
+@media (max-width: 1536) {
+  .contentContainer {
+    max-height: 440px !important;
+    min-height: 440px !important;
+    margin-top: -4.4em;
+  }
+}
+
 .contentContainer::before {
   content: '';
   position: absolute;
@@ -541,6 +549,12 @@ p.spacer {
           align-items: center;
   grid-gap: 45px;
   width: 75%;
+}
+
+@media (max-width: 1536px) {
+  .contentContainerTitle {
+    font-size: .75em !important;
+  }
 }
 
 .iconContainer {
@@ -616,6 +630,12 @@ h2 {
   padding: 0.3em 0.3em 0.3em;
 }
 
+@media (max-width: 1536px) {
+  h2 {
+    font-size: 1.15em !important;
+  }
+}
+
 p {
   font-weight: 300 !important;
   margin-top: 15px;
@@ -689,9 +709,9 @@ span, p {
     width: 12px !important;
     height: 158% !important;
     top: -112px !important;
-    right: 11.5% !important;
-    -webkit-transform: rotate(-33.2deg) !important;
-            transform: rotate(-33.2deg) !important;
+    right: 2% !important;
+    -webkit-transform: rotate(-35deg) !important;
+            transform: rotate(-35deg) !important;
   }
   .contentContainer.about::after {
     height: 3% !important;

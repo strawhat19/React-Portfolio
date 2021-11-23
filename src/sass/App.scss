@@ -361,6 +361,11 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -3.3em;
   max-height: 630px !important;
   min-height: 630px !important;
+  @media (max-width: 1536) { // Laptop
+    max-height: 440px !important;
+    min-height: 440px !important;
+    margin-top: -4.4em;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -396,6 +401,9 @@ p.spacer {
   align-items: center;
   grid-gap: 45px;
   width: 75%;
+  @media (max-width: 1536px) { // Laptop
+    font-size: .75em !important;
+  }
 }
 
 .iconContainer {
@@ -462,6 +470,9 @@ h2 {
   border-bottom: 1px solid var(--react);
   display: inline-block;
   padding: 0.3em 0.3em 0.3em;
+  @media (max-width: 1536px) { // Laptop
+    font-size: 1.15em !important;
+  }
 }
 
 p {
@@ -533,8 +544,8 @@ span, p {
       width: 12px !important;
       height: 158% !important;
       top: -112px !important;
-      right: 11.5% !important;
-      transform: rotate(-33.2deg) !important;
+      right: 2% !important;
+      transform: rotate(-35deg) !important;
     }
   }
 
