@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import ContentTitle from './contentTitle';
+import ColorChange from './colorChange';
 
-function Homepage({label, changeLabel}) {
+function Homepage({currentState, changeCurrentState}) {
     return (
-    <div id="contentLabel" data-label="homepage" class="contentContainer contain homepage">
-        <ContentTitle label={label} changeLabel={changeLabel} />
+    <div id="contentContainer" data-label="homepage" class="contentContainer contain homepage">
+        <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="homePage">Homepage</h2>

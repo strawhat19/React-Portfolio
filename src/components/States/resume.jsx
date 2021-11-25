@@ -1,10 +1,10 @@
 import React from 'react';
-import ContentTitle from './contentTitle';
+import ColorChange from './colorChange';
 
-function Resume() {
+function Resume({currentState, changeCurrentState}) {
     return (
-    <div id="contentLabel" data-label="resume" class="contentContainer contain resume">
-        <ContentTitle />
+    <div id="contentContainer" data-label="resume" class="contentContainer contain resume">
+        <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="resumePage">Resume</h2>

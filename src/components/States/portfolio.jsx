@@ -1,10 +1,10 @@
 import React from 'react';
-import ContentTitle from './contentTitle';
+import ColorChange from './colorChange';
 
-function Portfolio() {
+function Portfolio({currentState, changeCurrentState}) {
     return (
-    <div id="contentLabel" data-label="portfolio" class="contentContainer contain portfolio">
-        <ContentTitle />
+    <div id="contentContainer" data-label="portfolio" class="contentContainer contain portfolio">
+        <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="portfolioPage">Portfolio</h2>

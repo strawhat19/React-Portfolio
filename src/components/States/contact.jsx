@@ -1,10 +1,10 @@
 import React from 'react';
-import ContentTitle from './contentTitle';
+import ColorChange from './colorChange';
 
-function Contact() { 
+function Contact({currentState, changeCurrentState}) { 
         return (
-        <div id="contentLabel" data-label="contact" class="contentContainer contain contact">
-            <ContentTitle />
+        <div id="contentContainer" data-label="contact" class="contentContainer contain contact">
+            <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
             <div class="content">
                 <div class="lineSep"></div>
                 <h2 id="grabLabel" class="contactPage">Contact</h2>

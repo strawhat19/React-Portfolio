@@ -1,58 +1,10 @@
 import React, {useState} from 'react';
+import $ from 'jquery';
 
-function ContentTitle() {
-
-    const [label, setLabel] = useState('homePage');
-
-    const handleLabel = () => {
-
-        switch (label) {
-            default:
-            case 'homePage':
-                return (
-                    <div class="homePage">
-                        <h1 class="spacer homePage">
-                            <i class="fab fa-react"></i> | React 
-                            <span class="boldSecondary"> Portfolio</span>
-                        </h1>
-                    </div>
-                );
-            case 'aboutPage':
-                return (
-                    <div class="aboutPage">
-                        <h1 class="spacer aboutPage">
-                            <i class="fab fa-react"></i> | My 
-                            <span class="boldSecondary"> Story</span>
-                        </h1>
-                    </div>
-                );
-            case 'portfolioPage':
-                return (
-                    <h1 class="spacer portfolioPage">
-                        <i class="fab fa-react"></i> | My 
-                        <span class="boldSecondary"> Apps</span>
-                    </h1>
-                );
-            case 'contactPage':
-                return (
-                    <h1 class="spacer contactPage">
-                        <i class="fab fa-react"></i> | Get In 
-                        <span class="boldSecondary"> Touch</span>
-                    </h1>
-                );
-            case 'resumePage':
-                return (
-                    <h1 class="spacer resumePage">
-                        <i class="fab fa-react"></i> | My 
-                        <span class="boldSecondary"> Resume</span>
-                    </h1>
-                );
-            }
-    }
-        
-    // const changeLabel = (label) => setLabel(label);
+function ColorChange({currentState, changeCurrentState}) {
 
     const handleColorChange = (bodyBG) => {
+
         bodyBG = document.body.className;
 
         switch(bodyBG) {
@@ -65,6 +17,8 @@ function ContentTitle() {
         }
 
         function switchLight() {
+            let avatar = $(`.avatar:nth-child(2) .bioPic`);
+            console.log(avatar);
             let animation = document.querySelector('#animation');
             let blacks = document.querySelectorAll('.black');
             let contentContainer = document.querySelector(`.contentContainer`);
@@ -97,7 +51,12 @@ function ContentTitle() {
 
     return (
         <div class="contentContainerTitle">
-            {handleLabel()}
+            <div class="homePage">
+                <h1 class="spacer homePage">
+                    <i class="fab fa-react"></i> | React 
+                    <span class="boldSecondary"> Portfolio</span>
+                </h1>
+            </div>
             <div class="iconContainer outerIconContainer">
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Designer"><i class="fas fa-pencil-ruler"></i> | Designer</a>
                 <a onClick={handleColorChange} class="showScoresLink" id="showScoresLink" title="Developer"><i class="fas fa-code"></i> | Developer</a>
@@ -106,4 +65,4 @@ function ContentTitle() {
     );
 }
  
-export default ContentTitle;
+export default ColorChange;

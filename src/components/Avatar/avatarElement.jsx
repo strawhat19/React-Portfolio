@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AvatarElement() {
+function AvatarElement({currentState, changeCurrentState}) {
     return  (
     <div class="slantPic avatar">
        <div class="bioPic"></div>

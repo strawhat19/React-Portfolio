@@ -11,6 +11,7 @@ import Avatar from './Avatar/avatar';
 function Main() { 
 
         const [currentState, setCurrentState] = useState('homePage');
+        const changeCurrentState = (state) => setCurrentState(state);
 
         const handleState = () => {
             switch (currentState) {
@@ -29,12 +30,10 @@ function Main() {
             }
         }
 
-        const changeCurrentState = (state) => setCurrentState(state);
-
         return (
         <main className="app">
             <div className="appMain">
-                <Avatar />
+                <Avatar currentState={currentState} changeCurrentState={changeCurrentState}/>
                 <Header currentState={currentState} changeCurrentState={changeCurrentState} />
                     {handleState()}
             </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import ContentTitle from './contentTitle';
+import ColorChange from './colorChange';
 
-function About({label, changeLabel}) {
+function About({currentState, changeCurrentState}) {
     return (
-    <div id="contentLabel" data-label="about" class="contentContainer contain about">
-        <ContentTitle label={label} changeLabel={changeLabel} />
+    <div id="contentContainer" data-label="about" class="contentContainer contain about">
+        <ColorChange currentState={currentState} changeCurrentState={changeCurrentState} />
         <div class="content">
             <div class="lineSep"></div>
             <h2 id="grabLabel" class="aboutPage">About</h2>
