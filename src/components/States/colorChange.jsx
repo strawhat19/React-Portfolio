@@ -18,7 +18,7 @@ function ColorChange({currentState, changeCurrentState}) {
 
         function switchLight() {
             let avatar = document.querySelector(`.avatar:nth-child(2) .bioPic`);
-            avatar.style.background = `url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/4b9ecdf3331d8f8cb8fa97a6387f508d9159466e/public/assets/rickyPics/RickySignfullNavy.svg)`;
+            avatar.style.background = `url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/b34bbd199287b77374056d2e5806d59ea73e01c6/public/assets/rickyPics/RickySignfullNavy.svg)`;
             avatar.style.backgroundRepeat = `no-repeat`;
             let animation = document.querySelector('#animation');
             let blacks = document.querySelectorAll('.black');
