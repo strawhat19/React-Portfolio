@@ -1,11 +1,13 @@
 import React from 'react';
 import "./style/avatar.css";
+import AvatarElement from './avatarElement';
 
 function Avatar() {
     return  (
-    <div class="slantPic avatar">
-       <div class="bioPic"></div>
-    </div>
+        <div>
+            <AvatarElement />
+            <AvatarElement />
+        </div>
     );
 }
  

@@ -17,7 +17,7 @@
   grid-gap: 10px;
   z-index: 1;
   position: relative;
-  top: -9.1em;
+  top: -8.6em;
   right: -52em;
   width: 32%;
 }
@@ -32,8 +32,7 @@
 }
 
 .avatar .bioPic {
-  background-size: cover !important;
-  background-position: center !important;
+  background: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -85,21 +84,28 @@
   width: 100.5%;
   height: 130%;
   z-index: -1;
-  top: 74px;
+  top: 69px;
   left: -30px;
-  /* -webkit-clip-path: polygon(0% 0%, 93% 0%, 100% 71%, 0% 71%); */
-  /* clip-path: polygon(0% 0%, 93% 0%, 100% 71%, 0% 71%); */
   -webkit-clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
           clip-path: polygon(12.4% 0%, 100% 0%, 88% 100%, 0% 100%);
 }
 
 .avatar:nth-child(2) {
   position: absolute;
-  top: 46px;
+  top: 47px;
   left: 667px;
   width: 33%;
   -webkit-transform: scale(0.888) rotate(-0.1deg);
           transform: scale(0.888) rotate(-0.1deg);
+}
+
+.avatar:nth-child(2) .bioPic {
+  background: url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/a6214b6b069aebffc905b77917ed9e848a60e37d/public/assets/rickyPics/SignContents.svg);
+  background-size: 85% !important;
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat;
+  height: 265%;
+  margin-top: -0.6em;
 }
 
 .avatar:nth-child(2)::before {

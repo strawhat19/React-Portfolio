@@ -35,7 +35,6 @@ function Main() {
         <main className="app">
             <div className="appMain">
                 <Avatar />
-                <Avatar />
                 <Header currentState={currentState} changeCurrentState={changeCurrentState} />
                     {handleState()}
             </div>
