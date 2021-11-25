@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import $ from 'jquery';
+import React from 'react';
 
 function ColorChange({currentState, changeCurrentState}) {
 

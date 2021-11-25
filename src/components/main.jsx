@@ -16,17 +16,17 @@ function Main() {
         const handleState = () => {
             switch (currentState) {
                 case 'homePage':
-                    return <Homepage />;
+                    return <Homepage currentState={currentState} changeCurrentState={changeCurrentState} />;
                 case 'aboutPage':
-                    return <About />;
+                    return <About currentState={currentState} changeCurrentState={changeCurrentState} />;
                 case 'portfolioPage':
-                    return <Portfolio />;
+                    return <Portfolio currentState={currentState} changeCurrentState={changeCurrentState} />;
                 case 'contactPage':
-                    return <Contact />;
+                    return <Contact currentState={currentState} changeCurrentState={changeCurrentState} />;
                 case 'resumePage':
-                    return <Resume />;
+                    return <Resume currentState={currentState} changeCurrentState={changeCurrentState} />;
                 default:
-                    return <Homepage />;
+                    return <Homepage currentState={currentState} changeCurrentState={changeCurrentState} />;
             }
         }
 
