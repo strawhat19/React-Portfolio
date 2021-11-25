@@ -18,8 +18,8 @@
   z-index: 1;
   position: relative;
   top: -8.6em;
-  right: -52em;
-  width: 32%;
+  right: -53.4em;
+  width: 31%;
 }
 
 @media (max-width: 1536px) {
@@ -54,7 +54,7 @@
 
 .avatar .bioPic::after {
   position: absolute;
-  background: #000000;
+  background: var(--react);
   width: 100%;
   height: 100%;
   z-index: 4;
@@ -100,20 +100,22 @@
 }
 
 .avatar:nth-child(2) .bioPic {
-  background: url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/a6214b6b069aebffc905b77917ed9e848a60e37d/public/assets/rickyPics/SignContents.svg);
-  background-size: 85% !important;
+  background: url(https://raw.githubusercontent.com/strawhat19/React-Portfolio/4b9ecdf3331d8f8cb8fa97a6387f508d9159466e/public/assets/rickyPics/RickySignfull.svg);
+  background-size: 100% !important;
   background-position: 50% 50% !important;
   background-repeat: no-repeat;
   height: 265%;
   margin-top: -0.6em;
+  -webkit-transition: 300ms ease-in-out !important;
+  transition: 300ms ease-in-out !important;
 }
 
 .avatar:nth-child(2)::before {
-  background: black;
+  background: var(--react);
   top: -9px;
 }
 
 .avatar:nth-child(2)::after {
-  background: black;
+  background: var(--react);
 }
 /*# sourceMappingURL=avatar.css.map */
