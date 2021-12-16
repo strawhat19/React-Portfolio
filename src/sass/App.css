@@ -548,6 +548,10 @@ input[type=range]::-webkit-slider-thumb {
   min-height: 630px !important;
 }
 
+.contentContainer .innerContent2 {
+  width: 100%;
+}
+
 .contentContainer::before {
   content: '';
   position: absolute;
@@ -627,6 +631,7 @@ input[type=range]::-webkit-slider-thumb {
   border: solid 3px var(--react);
   margin: 1em 0;
   font-family: 'Montserrat' !important;
+  min-height: 140px;
 }
 
 .navButtons .navButton i {

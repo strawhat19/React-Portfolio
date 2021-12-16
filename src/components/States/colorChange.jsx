@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ColorChange({currentState, changeCurrentState}) {
+function ColorChange({currentState, changeCurrentState, username, changeUsername }) {
 
     function homeState() {
         changeCurrentState('homePage');
@@ -62,7 +62,7 @@ function ColorChange({currentState, changeCurrentState}) {
             <a class="homePage" onClick={() => homeState()} title={`Home Page`}>
                 <h1 class="spacer homePage">
                     <i class="fab fa-react"></i> | React 
-                    <span class="boldSecondary"> Portfolio</span>
+                    <span class="boldSecondary"> Portfolio</span> by {username}
                 </h1>
             </a>
             <div class="iconContainer outerIconContainer">

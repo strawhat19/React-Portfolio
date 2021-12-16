@@ -84,39 +84,41 @@ export default class Portfolio extends React.Component {
         let projects = this.state.projects;
         return (
         <div id="contentContainer" class="contentContainer contain portfolio">
-            <ColorChange />
-            <div class="content rtl">
-                <div className={`innerContent ltr`}>
-                    <h2 className={`react`}><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
-                    <div className={`navButtons`}>
-                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
-                            <span className={`innerContent`}>
-                                <img className={`buttonImage`} src="https://raw.githubusercontent.com/d4nnyq88/tune-time/main/public/images/Tune-Time-Cropped-Green.png" /> Tune Time    
-                            </span>
-                        </a>
-                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
-                            <span className={`innerContent`}>
-                                <img className={`buttonImage`} src="https://strawhat19.github.io/Portfolio/assets/images/graphics/Asset-2Icon-VLight-Greenofficial.png" /> Dyer & Posta    
-                            </span>
-                        </a>
-                        <a className="navButton" title="Piratechs" href="https://piratechs.com/" target="_blank">
-                            <span className={`innerContent`}>
-                                <img className={`buttonImage`} src="..../public/assets/PiratechsLogoreactColor.svg" /> Piratechs        
-                            </span>
-                        </a>
-                        <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
-                            <span className={`innerContent`}>
-                                <img className={`buttonImage`} src="https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/graphics/Sanctuary-Art.png" /> Sanctuary
-                            </span>
-                        </a>
+            <div className="innerContent2">
+                <ColorChange />
+                <div class="content rtl">
+                    <div className={`innerContent ltr`}>
+                        <h2 className={`react`}><i class="fas fa-project-diagram"></i> <span class="slashes">//</span> <span class="skinny">Featured</span> Projects</h2>
+                        <div className={`navButtons`}>
+                            <a className="navButton" title="Tune Time" href="https://tune-time.herokuapp.com/" target="_blank">
+                                <span className={`innerContent`}>
+                                    <img className={`buttonImage`} src="https://raw.githubusercontent.com/d4nnyq88/tune-time/main/public/images/Tune-Time-Cropped-Green.png" /> Tune Time    
+                                </span>
+                            </a>
+                            <a className="navButton" title="Tune Time" href="https://dyerandposta.com/" target="_blank">
+                                <span className={`innerContent`}>
+                                    <img className={`buttonImage`} src="https://piratechs.com/wp-content/uploads/2021/06/Asset-4Icon-VLightWhite-Greenofficial.svg" /> Dyer & Posta    
+                                </span>
+                            </a>
+                            <a className="navButton" title="Piratechs" href="https://piratechs.com/" target="_blank">
+                                <span className={`innerContent`}>
+                                    <img className={`buttonImage`} src="https://raw.githubusercontent.com/strawhat19/React-Portfolio/453768d664c70f85e89347af8ca6a7e1ed12a7f4/public/assets/PiratechsLogoreactColor.svg" /> Piratechs        
+                                </span>
+                            </a>
+                            <a className="navButton" title="Tune Time" href="https://www.youtube.com/watch?v=mAiFUNvG0Pk" target="_blank">
+                                <span className={`innerContent`}>
+                                    <img className={`buttonImage`} src="https://raw.githubusercontent.com/strawhat19/Portfolio/main/assets/images/graphics/Sanctuary-Art.png" /> Sanctuary
+                                </span>
+                            </a>
+                        </div>
+                        <h2 className={`react`}><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
+                        <div class="projectsContainer list-group">
+                            {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
+                        </div>
+                        <h2 className={`react`}><i class="fas fa-list-ul"></i> <span class="slashes">//</span> <span class="skinny">My</span> Skills</h2>
+                        <SkillsList />
+                        <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
                     </div>
-                    <h2 className={`react`}><i class="fab giticon fa-git-alt"></i> <span class="slashes">//</span> <span class="skinny">{user.name}'s</span> Pinned Github Projects:</h2>
-                    <div class="projectsContainer list-group">
-                        {projects.map((project,index) => <Project key={project.name} index={index} project={project} state={this.state} />)}
-                    </div>
-                    <h2 className={`react`}><i class="fas fa-list-ul"></i> <span class="slashes">//</span> <span class="skinny">My</span> Skills</h2>
-                    <SkillsList />
-                    <button class="gameButton transition"><i class="fab fa-github"></i> Github</button>
                 </div>
             </div>
         </div>
