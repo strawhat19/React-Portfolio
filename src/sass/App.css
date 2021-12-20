@@ -370,6 +370,10 @@ main {
   color: var(--sql);
 }
 
+.php i {
+  color: var(--php);
+}
+
 .node i {
   color: var(--node);
 }

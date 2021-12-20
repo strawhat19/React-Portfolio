@@ -10,6 +10,8 @@ export default class Project extends React.Component {
                 case `JavaScript`:
                     if (project.topics.includes(`react`)) {
                         return <div class="react iconRow slashContainer"><i class="fab fa-react"></i> <span class="slashes">//</span> React</div>;
+                    } else if (project.topics.includes(`php`)) {
+                        return <div class="php iconRow slashContainer"><i class="fab fa-php"></i> <span class="slashes">//</span> PHP</div>;
                     } else {
                         return <div class="js iconRow slashContainer"><i class="fab fa-js-square"></i> <span class="slashes">//</span> JS</div>;
                     }
